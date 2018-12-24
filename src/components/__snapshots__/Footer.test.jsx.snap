@@ -13,17 +13,7 @@ exports[`rendering 1`] = `
     2018 Jia Hao Goh. Modified by Jonathan Mares.
   </styled.span>
   <styled.a
-    href="/rss.xml"
-    rel="noopener"
-    target="_blank"
-    title="RSS Feed"
-  >
-    <RSS
-      width="16px"
-    />
-  </styled.a>
-  <styled.a
-    href="https://github.com/jiahaog/jiahao.codes"
+    href="https://github.com/jm2242/jiahao.codes"
     rel="noopener"
     target="_blank"
     title="Source code for this website"
