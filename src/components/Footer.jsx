@@ -31,7 +31,7 @@ export default function Footer() {
         <span role="img" aria-label="Copyright">
           &copy;
         </span>{' '}
-        Jia Hao Goh
+        Jonathan Mares
       </Copyright>
       <StyledLink
         href="/rss.xml"

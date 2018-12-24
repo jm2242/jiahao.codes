@@ -1,11 +1,11 @@
 {
   "name": "jiahao.codes",
-  "description": "Personal Hype-driven Web Page",
-  "version": "1.0.0",
-  "author": "Jia Hao Goh",
+  "description": "Personal Website and Blog",
+  "version": "1.1.0",
+  "author": "Jonathan Mares",
   "private": true,
   "bugs": {
-    "url": "https://github.com/jiahaog/jiahao.codes/issues"
+    "url": "https://github.com/jm2242/jiahao.codes/issues"
   },
   "dependencies": {
     "gatsby": "^1.9.158",
