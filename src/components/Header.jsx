@@ -70,9 +70,7 @@ export default function Header({ path }) {
         <List>
           <ListItem shouldGrow>
             <NavLink to="/">
-              <SiteTitle active={path === '/'}>
-                Home
-              </SiteTitle>
+              <SiteTitle active={path === '/'}>Home</SiteTitle>
             </NavLink>
           </ListItem>
           <ListItem>
