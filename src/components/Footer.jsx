@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { GitHub, RSS } from './icons';
+import { GitHub } from './icons';
 
 const FooterStyled = styled.footer`
   margin-top: 1rem;
