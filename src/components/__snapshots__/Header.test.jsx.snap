@@ -13,7 +13,7 @@ exports[`rendering 1`] = `
           <styled.h3
             active={false}
           >
-            &lt; Jia Hao /&gt;
+            Home
           </styled.h3>
         </Styled(GatsbyLink)>
       </styled.li>
