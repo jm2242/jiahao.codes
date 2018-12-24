@@ -71,7 +71,6 @@ module.exports = {
     },
     'gatsby-plugin-catch-links',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
