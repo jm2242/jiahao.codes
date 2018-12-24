@@ -1,16 +1,15 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://jiahao.codes',
-    title: 'Jia Hao',
-    author: 'Jia Hao Goh',
-    description: 'Jia Hao blogs about code',
+    siteUrl: 'jonathanmares.com',
+    title: 'Jonathan Mares',
+    author: 'Jonathan Mares',
+    description: 'Personal Website and Blog',
     facebookAppId: '1373234856114390',
-    twitterUser: 'jiahaog',
+    twitterUser: 'jmares93',
     social: {
-      githubUrl: 'https://github.com/jiahaog',
-      linkedInUrl: 'https://www.linkedin.com/in/jiahaog/',
-      keybaseUrl: 'https://keybase.io/jiahaog',
-      twitterUrl: 'https://twitter.com/jiahaog',
+      githubUrl: 'https://github.com/jm2242',
+      linkedInUrl: 'https://www.linkedin.com/in/jonathanmares/',
+      twitterUrl: 'https://twitter.com/jmares93',
     },
   },
   plugins: [

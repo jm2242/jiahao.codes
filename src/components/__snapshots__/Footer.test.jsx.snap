@@ -10,7 +10,7 @@ exports[`rendering 1`] = `
       ©
     </span>
      
-    Jia Hao Goh
+    2018 Jia Hao Goh. Modified by Jonathan Mares.
   </styled.span>
   <styled.a
     href="/rss.xml"

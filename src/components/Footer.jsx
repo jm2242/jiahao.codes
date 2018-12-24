@@ -31,18 +31,10 @@ export default function Footer() {
         <span role="img" aria-label="Copyright">
           &copy;
         </span>{' '}
-        Jonathan Mares
+        2018 Jia Hao Goh. Modified by Jonathan Mares.
       </Copyright>
       <StyledLink
-        href="/rss.xml"
-        target="_blank"
-        rel="noopener"
-        title="RSS Feed"
-      >
-        <RSS width="16px" />
-      </StyledLink>
-      <StyledLink
-        href="https://github.com/jiahaog/jiahao.codes"
+        href="https://github.com/jm2242/jiahao.codes"
         target="_blank"
         rel="noopener"
         title="Source code for this website"
