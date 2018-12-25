@@ -39,10 +39,12 @@ exports[`rendering 1`] = `
     >
       I’m
     </GatsbyLink>
-     Jia Hao, and I write software in San Francisco. Follow me on
+     Jonathan Mares, 
+    I'm
+     a software engineer in Washington, DC. Follow me on
      
     <a
-      href="https://twitter.com/jiahaog"
+      href="https://twitter.com/jmares93"
       rel="noopener noreferrer"
     >
       Twitter

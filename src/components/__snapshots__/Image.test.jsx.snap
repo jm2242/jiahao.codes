@@ -30,7 +30,7 @@ exports[`When a width is passed in 1`] = `
 exports[`When no props are passed in 1`] = `
 @media only screen and (min-width:740px) {
   .c0 {
-    width: 80vw;
+    width: 25vw;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);

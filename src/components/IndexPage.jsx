@@ -1,12 +1,11 @@
 /* eslint-disable react/no-danger */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link';
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import Image from './Image';
-import { image as imagePropType } from '../proptypes';
+import { image as imagePropType } from '../proptypes'
 
 const PostLink = styled(Link)`
   display: inline-block;
@@ -27,7 +26,7 @@ const PostLink = styled(Link)`
   }
 `;
 
-const Title = styled.h1 `
+const Title = styled.h1`
   margin-bottom: 2.175rem;
 `;
 

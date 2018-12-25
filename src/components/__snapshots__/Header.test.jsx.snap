@@ -19,6 +19,28 @@ exports[`rendering 1`] = `
       </styled.li>
       <styled.li>
         <Styled(GatsbyLink)
+          to="/motorcycle"
+        >
+          <styled.h3
+            active={false}
+          >
+            Motorcycle
+          </styled.h3>
+        </Styled(GatsbyLink)>
+      </styled.li>
+      <styled.li>
+        <Styled(GatsbyLink)
+          to="/tech"
+        >
+          <styled.h3
+            active={false}
+          >
+            Tech
+          </styled.h3>
+        </Styled(GatsbyLink)>
+      </styled.li>
+      <styled.li>
+        <Styled(GatsbyLink)
           to="/about"
         >
           <styled.h3
