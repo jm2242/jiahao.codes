@@ -9,7 +9,7 @@ import 'prismjs/themes/prism.css';
 import '../styles/globals.css';
 
 if (process.env.NODE_ENV === 'production') {
-  Raven.config('https://95a2b760d7da4745871cfc24130d725e@sentry.io/283796', {
+  Raven.config('https://8df484a9c40c43e2bb15a2376c1248ae@sentry.io/1359490', {
     environment: 'production',
   }).install();
 }

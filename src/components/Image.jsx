@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Image = styled(GatsbyImage)`
   @media only screen and (min-width: 740px) {
-    width: ${({ width }) => width || '80vw'};
+    width: ${({ width }) => width || '25vw'};
 
     /* need both to ensure that image scales relative to its center */
     left: 50%;

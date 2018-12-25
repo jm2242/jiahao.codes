@@ -49,7 +49,12 @@ export const pageQuery = graphql`
     ...SiteFragment
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/src/pages/blog//" } }
+      filter: {
+        fileAbsolutePath: {
+          regex: "/src/pages/blog//"
+        },
+        frontmatter: { draft: { ne: true } }
+      }
     ) {
       edges {
         node {

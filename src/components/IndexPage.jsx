@@ -27,6 +27,10 @@ const PostLink = styled(Link)`
   }
 `;
 
+const Title = styled.h1 `
+  margin-bottom: 2.175rem;
+`;
+
 const PostContent = styled.div`
   color: hsla(0, 0%, 0%, 0.8);
   opacity: 0.8;
@@ -72,10 +76,10 @@ function CoverDivider() {
   );
 }
 
-export default function IndexPage({ posts, coverImageSizes }) {
+export default function IndexPage({ posts }) {
   return (
     <div>
-      <Image alt="Index page cover" sizes={coverImageSizes} width="70vw" />
+      <Title>Latest Posts</Title>
       <CoverDivider />
       <div>
         {posts.map(({ title, path, date, excerpt, timeToRead }) => (

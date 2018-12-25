@@ -8,7 +8,7 @@ module.exports = {
     twitterUser: 'jmares93',
     social: {
       githubUrl: 'https://github.com/jm2242',
-      keybaseUrl: 'keybase.io/jmares',
+      keybaseUrl: 'https://keybase.io/jmares',
       linkedInUrl: 'https://www.linkedin.com/in/jonathanmares/',
       twitterUrl: 'https://twitter.com/jmares93',
     },

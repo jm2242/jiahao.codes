@@ -39,7 +39,7 @@ export const markdownFrontmatterWithCoverFragment = graphql`
       date(formatString: "MMMM DD, YYYY")
       cover {
         childImageSharp {
-          sizes(maxWidth: 2560) {
+          sizes(maxWidth: 800) {
             ...GatsbyImageSharpSizes
           }
         }

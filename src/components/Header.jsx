@@ -74,6 +74,16 @@ export default function Header({ path }) {
             </NavLink>
           </ListItem>
           <ListItem>
+            <NavLink to="/motorcycle">
+              <SiteLink active={path === '/motororcycle'}>Motorcycle</SiteLink>
+            </NavLink>
+          </ListItem>
+          <ListItem>
+            <NavLink to="/tech">
+              <SiteLink active={path === '/tech'}>Tech</SiteLink>
+            </NavLink>
+          </ListItem>
+          <ListItem>
             <NavLink to="/about">
               <SiteLink active={path === '/about'}>About</SiteLink>
             </NavLink>

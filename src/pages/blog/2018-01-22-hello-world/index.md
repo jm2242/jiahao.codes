@@ -1,6 +1,7 @@
 ---
 title: Hello Blog World!
 date: 2018-01-22
+draft: true
 path: /blog/hello-world/
 excerpt: <code>console.log('Hello Blog World!');</code>
 cover: ./cover.jpg

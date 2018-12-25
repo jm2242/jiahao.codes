@@ -2,9 +2,10 @@
 title: About Me
 date: 2018-02-06
 path: /about/
-cover: ./cover.jpg
+cover: ./mares-square-pop.jpg
 ---
 
-Hi! I’m Jia Hao. I write Software at [Amazon](https://www.amazon.com/) in San Francisco, and previously at [Grab](https://www.grab.com/sg/). Welcome to my site where I talk about the world of ones and zeroes.
+Hi! I'm Jonathan Mares. I live in Washington DC and am a full stack engineer at [Quorum](https://www.quorum.us/).
+Originally from Be'er Sheva, Israel, I grew up in New York and spent my college years at Cornell, studying Chemical Engineering and Computer Science. In my free time, I enjoy playing classical and jazz piano, soccer, mountain biking, motorcycles, and pretending to understand wine.
 
-Read more about the architecture of this website [here](/blog/why-i-upgraded-my-website/).
+If you'd like to reach me, you can shoot me an email at jmares93[at]gmail[dot]com.
