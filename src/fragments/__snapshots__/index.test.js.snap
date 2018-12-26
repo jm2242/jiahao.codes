@@ -8,6 +8,7 @@ Object {
     frontmatter {
       path
       title
+      tags
       excerpt
       date(formatString: \\"MMMM DD, YYYY\\")
     }

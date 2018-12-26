@@ -24,6 +24,7 @@ export const markdownFrontmatterFragment = graphql`
     frontmatter {
       path
       title
+      tags
       excerpt
       date(formatString: "MMMM DD, YYYY")
     }

@@ -1,5 +1,5 @@
 ---
-title: Why I Upgraded My Website to GatsbyJS (Draft)
+title: Why I Upgraded My Website to GatsbyJS
 date: 2018-02-24
 draft: true
 path: /blog/why-i-upgraded-my-website/

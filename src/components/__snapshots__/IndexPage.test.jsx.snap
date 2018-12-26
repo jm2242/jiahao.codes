@@ -5,7 +5,11 @@ exports[`rendering 1`] = `
   <styled.h1>
     Latest Posts
   </styled.h1>
-  <CoverDivider />
-  <div />
+  <TopDivider />
+  <div>
+    <PostList
+      posts={Array []}
+    />
+  </div>
 </div>
 `;
