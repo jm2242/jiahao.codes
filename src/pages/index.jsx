@@ -1,7 +1,8 @@
+/* eslint-disable react/jsx-curly-brace-presence */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from "gatsby"
-import Layout from "components/Layout"
+import Layout from "../components/Layout"
 
 import { Head, IndexPage } from '../components';
 import {
@@ -17,9 +18,7 @@ export default function SiteIndex({
       <Head site={site} />
       <IndexPage
         title="Latest Posts"
-        text={`
-          Welcome to my Blog and Personal Website!
-        `}
+        text={`Welcome to my Blog and Personal Website!`}
         posts={posts.map(
           ({
             node: {

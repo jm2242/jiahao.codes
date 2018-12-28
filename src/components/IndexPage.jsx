@@ -18,8 +18,8 @@ const Text = styled.p`
 
 const IndexPage = ({ posts, title, text }) => (
     <div>
-        <Title>{title}</Title>
-        <Text>{text}</Text>
+        {title && <Title>{title}</Title>}
+        {text && <Text>{text}</Text>}
         <TopDivider />
         <div>
             <PostList posts={posts} />
@@ -38,6 +38,13 @@ IndexPage.propTypes = {
     }),
   ).isRequired,
   coverImageSizes: imagePropType.isRequired,
+  title: PropTypes.string,
+  text: PropTypes.string,
 };
+
+IndexPage.defaultProps = {
+  title: undefined,
+  text: undefined,
+}
 
 export default IndexPage
