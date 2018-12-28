@@ -17,7 +17,7 @@ const LayoutDiv = styled.div`
 
 const ContentDiv = styled.div`
   margin: 3rem auto;
-  max-width: 740px;
+  max-width: 900px;
 `;
 
 if (process.env.NODE_ENV === 'production') {
