@@ -1,5 +1,7 @@
+import { graphql } from "gatsby"
+
 export const siteFragment = graphql`
-  fragment SiteFragment on RootQueryType {
+  fragment SiteFragment on Query {
     site {
       siteMetadata {
         siteUrl
@@ -22,7 +24,6 @@ export const siteFragment = graphql`
 export const markdownFrontmatterFragment = graphql`
   fragment MarkdownFrontmatterFragment on MarkdownRemark {
     frontmatter {
-      path
       title
       tags
       excerpt
@@ -34,7 +35,6 @@ export const markdownFrontmatterFragment = graphql`
 export const markdownFrontmatterWithCoverFragment = graphql`
   fragment MarkdownFrontmatterWithCoverFragment on MarkdownRemark {
     frontmatter {
-      path
       title
       excerpt
       date(formatString: "MMMM DD, YYYY")
@@ -51,6 +51,9 @@ export const markdownFrontmatterWithCoverFragment = graphql`
 
 export const markdownMetadataFragment = graphql`
   fragment MarkdownMetadataFragment on MarkdownRemark {
+    fields {
+      slug
+    }
     html
     excerpt
     timeToRead

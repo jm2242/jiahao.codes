@@ -2,7 +2,6 @@
 title: Mocking Modules with Jest
 date: 2018-01-23
 draft: true
-path: /blog/mocking-modules-with-jest/
 excerpt: How to mock modules using Jest <em>à la</em> RSpec
 ---
 

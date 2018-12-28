@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from 'prop-types';
 import styled from 'styled-components'
-import Link from 'gatsby-link';
+import { Link } from 'gatsby'
 
 const PostContent = styled.div `
   color: hsla(0, 0%, 0%, 0.8);
@@ -50,8 +50,8 @@ const PostLink = styled(Link)
 
 const PostList = ({ posts }) => (
     <React.Fragment>
-        {posts && posts.map(({ title, path, date, excerpt, tags, timeToRead }) => (
-          <PostLink key={path} to={path}>
+        {posts && posts.map(({ title, fields: { slug }, date, excerpt, tags, timeToRead }) => (
+          <PostLink key={slug} to={slug}>
             <PostTitle>{title}</PostTitle>
             <PostContent>
               <PostDate>{date}</PostDate>
@@ -66,12 +66,15 @@ const PostList = ({ posts }) => (
 )
 
 PostList.propTypes = {
+    date: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+    fields: PropTypes.shape({
+        slug: PropTypes.string.isRequired,
+    }).isRequired,
+    path: PropTypes.string.isRequired,
     posts: PropTypes.shape({
-        date: PropTypes.string.isRequired,
-        excerpt: PropTypes.string.isRequired,
-        path: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        timeToRead: PropTypes.number.isRequired,
+    timeToRead: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
     }).isRequired,
 }
 

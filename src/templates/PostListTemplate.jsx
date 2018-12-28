@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import { graphql } from "gatsby"
 import { IndexPage } from "../components/IndexPage"
 
 import {
@@ -65,11 +66,6 @@ export const pageQuery = graphql `
           ...MarkdownMetadataFragment
           ...MarkdownFrontmatterFragment
         }
-      }
-    }
-    indexCover: imageSharp(id: { regex: "/indexCover/" }) {
-      sizes(maxWidth: 2560) {
-        ...GatsbyImageSharpSizes
       }
     }
   }

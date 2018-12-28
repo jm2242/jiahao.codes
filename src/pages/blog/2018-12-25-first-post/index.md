@@ -1,7 +1,6 @@
 ---
 title: First Post!
 date: 2018-12-25
-path: /blog/first-post/
 excerpt: Refactoring my Personal Website
 tags: ["tech", "Gatsby", "React"]
 ---
@@ -40,6 +39,14 @@ export const pageQuery = graphql`
 ```
 
 This allows me to both keep around Jia's posts for reference as well as push code without having my unfinished posts show up on my website before they are ready. (Side note - a future improvement would be to make this dynamic - where I can toggle blog posts on/off, kind of like feature flags)
+
+# Migrating from Gatsby V1 => V2
+I also decided to upgrade to Gatsby 2.
+
+- Update Gatsby to latest version
+- Go through and run `npm install [packageName]@latest
+- Uninstall `gatsby-plugin-react-next` and remove from config as Gatsby 2 fully supports React 16
+- Remove the `.babelrc` file
 
 Additional things todo for the future:
 - Implement tags for posts and show related posts

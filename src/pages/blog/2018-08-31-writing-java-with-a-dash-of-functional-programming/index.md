@@ -2,7 +2,6 @@
 title: Writing Java With a Dash of Functional Programming
 date: 2018-08-31
 draft: true
-path: /blog/writing-java-with-a-dash-of-functional-programming/
 excerpt: Using <code>Either</code> in Java for more declarative code
 ---
 

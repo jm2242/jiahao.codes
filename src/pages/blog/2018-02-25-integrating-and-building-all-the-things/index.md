@@ -2,7 +2,6 @@
 title: Integrating and Building All the Things For My Website!
 date: 2018-02-25
 draft: true
-path: /blog/integrating-and-building-all-the-things/
 cover: ./cover.png
 excerpt: The engineering behind this website
 ---

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { graphql } from "gatsby"
 import { Head, Post } from '../components';
+import Layout from "../components/Layout"
+
 import {
   markdownRemark as markdownRemarkPropType,
   site as sitePropType,
@@ -12,7 +14,8 @@ export default function PostTemplate({
     site,
     markdownRemark: {
       excerpt,
-      frontmatter: { title, date, excerpt: frontmatterExcerpt, path, cover },
+      fields: { slug },
+      frontmatter: { title, date, excerpt: frontmatterExcerpt, cover },
       html,
     },
   },
@@ -20,11 +23,11 @@ export default function PostTemplate({
   const imageSizes = cover && cover.childImageSharp.sizes;
   const imageSrc = imageSizes && imageSizes.src;
   return (
-    <div>
+    <Layout>
       <Head
         title={title}
         excerpt={frontmatterExcerpt || excerpt}
-        path={path}
+        path={slug}
         site={site}
         image={imageSrc}
       />
@@ -35,7 +38,7 @@ export default function PostTemplate({
         excerpt={frontmatterExcerpt}
         coverImageSizes={imageSizes}
       />
-    </div>
+    </Layout>
   );
 }
 
@@ -47,9 +50,9 @@ PostTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query PostByPath($path: String!) {
+  query PostByPath($slug: String!) {
     ...SiteFragment
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       ...MarkdownMetadataFragment
       ...MarkdownFrontmatterWithCoverFragment
     }

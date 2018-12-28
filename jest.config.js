@@ -7,6 +7,7 @@ module.exports = {
     '\\.(css|less)$': '<rootDir>/test/__mocks__/styleMock.js',
   },
   testPathIgnorePatterns: ['/.cache/'],
+  testURL: "http://localhost",
   setupFiles: ['./test/setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
 };

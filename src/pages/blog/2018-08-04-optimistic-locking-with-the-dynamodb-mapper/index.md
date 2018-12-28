@@ -2,7 +2,6 @@
 title: Optimistic Locking with the DynamoDB Mapper
 date: 2018-08-04
 draft: true
-path: /blog/optimistic-locking-with-the-dynamodb-mapper/
 excerpt: Exploring how optimistic locking is implemented in the DynamoDB Mapper library
 ---
 

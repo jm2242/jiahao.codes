@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { Head, About } from '../components';
+import { graphql } from "gatsby"
+import { Head, About } from '../components'
+import Layout from "../components/Layout"
 import {
   markdownRemark as markdownRemarkPropType,
   site as sitePropType,
@@ -11,9 +12,9 @@ export default function AboutTemplate({
   data: {
     site,
     markdownRemark: {
+      fields: { slug },
       frontmatter: {
         title,
-        path,
         cover: { childImageSharp: { sizes: coverImageSizes } },
       },
       html,
@@ -21,15 +22,15 @@ export default function AboutTemplate({
   },
 }) {
   return (
-    <div>
-      <Head title={title} path={path} site={site} />
+    <Layout>
+      <Head title={title} site={site} path={slug} />
       <About
         title={title}
         html={html}
         social={site.siteMetadata.social}
         coverImageSizes={coverImageSizes}
       />
-    </div>
+    </Layout>
   );
 }
 
@@ -41,9 +42,9 @@ AboutTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query AboutPage($path: String!) {
+  query AboutPage($slug: String!) {
     ...SiteFragment
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       ...MarkdownMetadataFragment
       ...MarkdownFrontmatterWithCoverFragment
     }

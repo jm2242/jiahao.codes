@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
 import { Head, IndexPage } from '../components';
 import {
@@ -11,27 +13,28 @@ export default function SiteIndex({
   data: { site, allMarkdownRemark: { edges: posts }, indexCover },
 }) {
   return (
-    <div>
+    <Layout>
       <Head site={site} />
       <IndexPage
         posts={posts.map(
           ({
             node: {
               excerpt,
+              fields,
               timeToRead,
-              frontmatter: { excerpt: frontmatterExcerpt, title, path, date },
+              frontmatter: { excerpt: frontmatterExcerpt, title, date },
             },
           }) => ({
-            title,
-            path,
             date,
+            fields,
             timeToRead,
+            title,
             excerpt: frontmatterExcerpt || excerpt,
           }),
         )}
-        coverImageSizes={indexCover.sizes}
+        // coverImageSizes={indexCover.sizes}
       />
-    </div>
+    </Layout>
   );
 }
 
@@ -61,11 +64,6 @@ export const pageQuery = graphql`
           ...MarkdownMetadataFragment
           ...MarkdownFrontmatterFragment
         }
-      }
-    }
-    indexCover: imageSharp(id: { regex: "/indexCover/" }) {
-      sizes(maxWidth: 2560) {
-        ...GatsbyImageSharpSizes
       }
     }
   }

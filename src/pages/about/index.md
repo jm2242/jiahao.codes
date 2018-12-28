@@ -1,7 +1,6 @@
 ---
 title: About Me
 date: 2018-02-06
-path: /about/
 cover: ./mares-square-pop.jpg
 ---
 

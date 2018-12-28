@@ -14,7 +14,6 @@ module.exports = {
     },
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
@@ -41,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `img`,
-        path: `${__dirname}/src/img/`,
+        path: `${__dirname}/src/img`,
       },
     },
     {
@@ -74,7 +73,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-66102276-1',
+        trackingId: 'UA-689970606-1',
       },
     },
     'gatsby-plugin-feed',

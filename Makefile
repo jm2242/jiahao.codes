@@ -22,8 +22,6 @@ serve: build
 	npm run serve
 
 .PHONY: test
-test:
-	npm test
 
 .PHONY: lint
 lint:

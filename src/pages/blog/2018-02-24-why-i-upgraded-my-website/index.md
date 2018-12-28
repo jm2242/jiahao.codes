@@ -2,7 +2,6 @@
 title: Why I Upgraded My Website to GatsbyJS
 date: 2018-02-24
 draft: true
-path: /blog/why-i-upgraded-my-website/
 cover: ./cover.jpg
 excerpt: My thought process during the long overdue rewrite of this website
 ---

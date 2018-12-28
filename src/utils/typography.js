@@ -14,5 +14,6 @@ theme.googleFonts = [
 ];
 
 const typography = new Typography(theme);
-
-export default typography;
+const { rhythm, scale } = typography;
+export { rhythm, scale }
+export default typography
