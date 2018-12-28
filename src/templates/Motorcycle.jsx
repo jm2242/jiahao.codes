@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from "gatsby"
-import Layout from "components/Layout"
+import Layout from "../components/Layout"
 
 import { Head, IndexPage } from '../components';
 import {
@@ -9,18 +9,15 @@ import {
   image as imagePropType,
 } from '../proptypes';
 
-export default function SiteIndex({
+export default function Motorcycle({
   data: { site, allMarkdownRemark: { edges: posts }, indexCover },
 }) {
   return (
     <Layout>
-      <Head site={site} />
+      <Head site={site} title="Motorcycle" path="/motorcycle" />
       <IndexPage
-        title="Latest Posts"
-        text={`
-          Welcome to my Blog and Personal Website!
-        `}
-        posts={posts.map(
+        title="Motorcycle Posts"
+        posts={posts && posts.map(
           ({
             node: {
               excerpt,
@@ -42,7 +39,7 @@ export default function SiteIndex({
   );
 }
 
-SiteIndex.propTypes = {
+Motorcycle.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: allMarkdownRemarkPropType,
     indexCover: PropTypes.shape({
@@ -52,7 +49,7 @@ SiteIndex.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query MotorcyclePostsQuery {
     ...SiteFragment
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
@@ -60,7 +57,10 @@ export const pageQuery = graphql`
         fileAbsolutePath: {
           regex: "/src/pages/blog//"
         },
-        frontmatter: { draft: { ne: true } }
+        frontmatter: {
+            tags: { in: ["motorcycle"] }
+            draft: { ne: true }
+        }
       }
     ) {
       edges {

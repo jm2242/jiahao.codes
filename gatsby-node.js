@@ -7,7 +7,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
     if (node.internal.type === 'MarkdownRemark') {
         const value = createFilePath({ node, getNode, basePath: `pages` });
-        console.log(value)
         createNodeField({
             name: `slug`,
             node,
@@ -79,4 +78,15 @@ const createPages = (
 exports.createPages = async (props) => {
   await createPages(props, '/src/pages/blog/', './src/templates/Post.jsx');
   await createPages(props, '/src/pages/about/', './src/templates/About.jsx');
+  await createPages(props, '/src/pages/motorcycle/', './src/templates/Motorcycle.jsx');
+  await createPages(props, '/src/pages/tech/', './src/templates/Tech.jsx');
 };
+
+// Allow me to use something like: import { X } from 'directory' instead of '../../folder/directory'
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}

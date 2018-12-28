@@ -8,7 +8,7 @@ import {
     image as imagePropType,
 } from '../proptypes';
 
-
+// currently unused
 const PostListTemplate = ({
     data: {
       allMarkdownRemark: {

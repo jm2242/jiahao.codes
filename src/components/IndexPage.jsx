@@ -12,9 +12,14 @@ const Title = styled.h1`
   margin-bottom: 2.175rem;
 `;
 
-const IndexPage = ({ posts }) => (
+const Text = styled.p`
+  margin-bottom: 1.175rem;
+`;
+
+const IndexPage = ({ posts, title, text }) => (
     <div>
-        <Title>Latest Posts</Title>
+        <Title>{title}</Title>
+        <Text>{text}</Text>
         <TopDivider />
         <div>
             <PostList posts={posts} />
