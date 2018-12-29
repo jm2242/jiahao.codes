@@ -42,46 +42,45 @@ Before we can do anything, we need to get the branches that are relevant to our 
 
 
 ``` python
-    def get_unmerged_closed_pull_requests(self, base_branch):
-        """
-        Get a list of unmerged, closed pull requests to a particular base_branch
-        Args:
-            (str) - base_branch - the base branch of the form hotfix/2.9.3.1
-        Returns:
-            (List[PullRequest]) - list of PullRequest objects
-        """
+def get_unmerged_closed_pull_requests(self, base_branch):
+    """
+    Get a list of unmerged, closed pull requests to a particular base_branch
+    Args:
+        (str) - base_branch - the base branch of the form hotfix/2.9.3.1
+    Returns:
+        (List[PullRequest]) - list of PullRequest objects
+    """
 
-        # these will be both merged and unmerged
-        query = self.repo.get_pulls(state="closed", base=base_branch)
+    # these will be both merged and unmerged
+    query = self.repo.get_pulls(state="closed", base=base_branch)
 
-        # unmerged prs should have a None merged_at attribute
-        return [pr for pr in query if not pr.merged_at]
+    # unmerged prs should have a None merged_at attribute
+    return [pr for pr in query if not pr.merged_at]
 ```
 
 Now that we can get PR's we are interested in, we need change each PR's base branch and reopen it. `pygithub` exposes an `edit` function on the `PullRequest` class to modify attributes of a pull request, so let's use it:
 
 ``` python
-    def update_base_branches_and_open_prs(self, base_branch, new_base_branch):
-        """
-        Get all the PR's to the base_branch, change their branch bases to
-        new_base_branch, and open them
-        Args:
-            (str) - base_branch - the base branch of the form hotfix/2.9.3.1
-            (str) - new_base_branch - the new base branch to set prs to of form hotfix/2.9.3.2
-        """
+def update_base_branches_and_open_prs(self, base_branch, new_base_branch):
+    """
+    Get all the PR's to the base_branch, change their branch bases to
+    new_base_branch, and open them
+    Args:
+        (str) - base_branch - the base branch of the form hotfix/2.9.3.1
+        (str) - new_base_branch - the new base branch to set prs to of form hotfix/2.9.3.2
+    """
 
-        relevant_prs = self.get_unmerged_closed_pull_requests(base_branch)
+    relevant_prs = self.get_unmerged_closed_pull_requests(base_branch)
 
-        # update to new_base_branch and reopen
-        for pr in relevant_prs:
-            try:
-                log.info(u"Updating PR: {0}".format(pr.title))
-                pr.edit(base=new_base_branch)
-                pr.edit(state="open")
+    # update to new_base_branch and reopen
+    for pr in relevant_prs:
+        try:
+            log.info(u"Updating PR: {0}".format(pr.title))
+            pr.edit(base=new_base_branch)
+            pr.edit(state="open")
 
-            except Exception:
-                log.exception(u"Unable to update Pr {title}".format(title=pr.title))
-
+        except Exception:
+            log.exception(u"Unable to update Pr {title}".format(title=pr.title))
 ```
 
 The function `update_base_branches_and_open_prs` accepts the previous and new base branches and attempts to reopen each of the PR's from `get_unmerged_closed_pull_requests`.
@@ -104,60 +103,60 @@ I couldn't find something that indicated whether a Pull Request was autoclosed, 
 
 
 ``` python
-    def update_base_branches_and_open_prs(self, base_branch, new_base_branch):
-        """
-        Get all the PR's to the base_branch, change their branch bases to
-        new_base_branch, and open them
-        Args:
-            (str) - base_branch - the base branch of the form hotfix/2.9.3.1
-            (str) - new_base_branch - the new base branch to set prs to of form hotfix/2.9.3.2
-        """
+def update_base_branches_and_open_prs(self, base_branch, new_base_branch):
+    """
+    Get all the PR's to the base_branch, change their branch bases to
+    new_base_branch, and open them
+    Args:
+        (str) - base_branch - the base branch of the form hotfix/2.9.3.1
+        (str) - new_base_branch - the new base branch to set prs to of form hotfix/2.9.3.2
+    """
 
-        relevant_prs = self.get_unmerged_closed_pull_requests(base_branch)
+    relevant_prs = self.get_unmerged_closed_pull_requests(base_branch)
 
-        # update to new_base_branch and reopen
-        for pr in relevant_prs:
-            try:
+    # update to new_base_branch and reopen
+    for pr in relevant_prs:
+        try:
 
-                # we only want to update PR's that were closed by githubadmin as they are auto-closed
-                events = self.get_events_for_pull_request(pr)
-                last_event = events[-1]
-                if last_event["event"] == "closed" and last_event["actor"]["login"] == "githubadmin":
-                    log.info(u"Updating PR: {0}".format(pr.title))
-                    pr.edit(base=new_base_branch)
-                    pr.edit(state="open")
-                else:
-                    log.info(u"PR {0} was not autoclosed, skipping".format(pr.title))
-            except Exception:
-                log.exception(u"Unable to update Pr {title}".format(title=pr.title))
+            # we only want to update PR's that were closed by githubadmin as they are auto-closed
+            events = self.get_events_for_pull_request(pr)
+            last_event = events[-1]
+            if last_event["event"] == "closed" and last_event["actor"]["login"] == "githubadmin":
+                log.info(u"Updating PR: {0}".format(pr.title))
+                pr.edit(base=new_base_branch)
+                pr.edit(state="open")
+            else:
+                log.info(u"PR {0} was not autoclosed, skipping".format(pr.title))
+        except Exception:
+            log.exception(u"Unable to update Pr {title}".format(title=pr.title))
 ```
 
 
 Last thing to do is to actually get the events for a pull request. `pygithub` didn't seem to provide a direct way to get these, so we have to make a request to the Github API for this information:
 
 ``` python
-    def get_events_for_pull_request(self, pull_request):
-        """
-        Get the events associated with a particular PullRequest object
-        Args:
-            pull_request (github.PullRequest.PullRequest) - representation of a Pull Request
-        Returns:
-            HTTP response with events for a Pull Request
-        """
-        issue_url = pull_request._rawData['issue_url']
+def get_events_for_pull_request(self, pull_request):
+    """
+    Get the events associated with a particular PullRequest object
+    Args:
+        pull_request (github.PullRequest.PullRequest) - representation of a Pull Request
+    Returns:
+        HTTP response with events for a Pull Request
+    """
+    issue_url = pull_request._rawData['issue_url']
 
-        request_url = "{0}/events".format(issue_url)
-        auth_obj = HTTPBasicAuth(
-            self.username,
-            self.access_token
-        )
-        try:
-            response = json.loads(requests.get(request_url, auth=auth_obj).content)
-        except Exception:
-            log.info(u"Unable to get events for PR {title}".format(title=pull_request.title))
-            response = None
+    request_url = "{0}/events".format(issue_url)
+    auth_obj = HTTPBasicAuth(
+        self.username,
+        self.access_token
+    )
+    try:
+        response = json.loads(requests.get(request_url, auth=auth_obj).content)
+    except Exception:
+        log.info(u"Unable to get events for PR {title}".format(title=pull_request.title))
+        response = None
 
-        return response
+    return response
 ```
 
 And we're done!

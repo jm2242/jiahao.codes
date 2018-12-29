@@ -14,11 +14,13 @@ export default function PostTemplate({
     site,
     markdownRemark: {
       excerpt,
+      id,
       fields: { slug },
       frontmatter: { title, date, excerpt: frontmatterExcerpt, cover },
       html,
     },
   },
+  location,
 }) {
   const imageSizes = cover && cover.childImageSharp.sizes;
   const imageSrc = imageSizes && imageSizes.src;
@@ -32,11 +34,13 @@ export default function PostTemplate({
         image={imageSrc}
       />
       <Post
-        title={title}
-        date={date}
-        html={html}
-        excerpt={frontmatterExcerpt}
         coverImageSizes={imageSizes}
+        date={date}
+        excerpt={frontmatterExcerpt}
+        html={html}
+        id={id}
+        location={location}
+        title={title}
       />
     </Layout>
   );
@@ -47,6 +51,7 @@ PostTemplate.propTypes = {
     markdownRemark: markdownRemarkPropType,
     site: sitePropType.isRequired,
   }).isRequired,
+  location: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export const pageQuery = graphql`

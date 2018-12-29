@@ -3,7 +3,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "gatsby"
-import styled from 'styled-components';
+import ReactDisqusComments from "react-disqus-comments"
+import styled from 'styled-components'
 
 import Image from './Image';
 import { image as imagePropType } from '../proptypes';
@@ -25,7 +26,15 @@ const Excerpt = styled.p`
   margin-bottom: 0;
 `;
 
-export default function Post({ title, date, excerpt, html, coverImageSizes }) {
+export default function Post({
+  coverImageSizes,
+  date,
+  excerpt,
+  html,
+  id,
+  location: { href },
+  title,
+}) {
   return (
     <div>
       <Title>{title}</Title>
@@ -36,6 +45,13 @@ export default function Post({ title, date, excerpt, html, coverImageSizes }) {
       {coverImageSizes && <Image alt={title} sizes={coverImageSizes} />}
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <hr />
+      <ReactDisqusComments
+        shortname="jonathanmares"
+        identifier={id}
+        title={title}
+        url={href}
+        onNewComment={() => {}}
+		  />
       <p>
         <Link to="/about">I’m</Link> Jonathan Mares, {"I'm"} a software engineer in Washington, DC. Follow me on{' '}
         <a href="https://twitter.com/jmares93" rel="noopener noreferrer">
@@ -47,11 +63,13 @@ export default function Post({ title, date, excerpt, html, coverImageSizes }) {
 }
 
 Post.propTypes = {
-  date: PropTypes.string.isRequired,
-  html: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  excerpt: PropTypes.string.isRequired,
   coverImageSizes: imagePropType,
+  date: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
+  html: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  title: PropTypes.string.isRequired,
 };
 
 Post.defaultProps = {

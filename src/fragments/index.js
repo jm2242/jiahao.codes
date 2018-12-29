@@ -23,6 +23,7 @@ export const siteFragment = graphql`
 
 export const markdownFrontmatterFragment = graphql`
   fragment MarkdownFrontmatterFragment on MarkdownRemark {
+    id
     frontmatter {
       title
       tags
@@ -34,6 +35,7 @@ export const markdownFrontmatterFragment = graphql`
 
 export const markdownFrontmatterWithCoverFragment = graphql`
   fragment MarkdownFrontmatterWithCoverFragment on MarkdownRemark {
+    id
     frontmatter {
       title
       excerpt
