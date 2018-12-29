@@ -3,7 +3,7 @@ module.exports = {
     siteUrl: 'https://jonathanmares.com',
     title: 'Jonathan Mares',
     author: 'Jonathan Mares',
-    description: 'Personal Website and Blog',
+    description: 'Personal website and blog on technology, motorcycles, and more.',
     facebookAppId: '1373234856114390',
     twitterUser: 'jmares93',
     social: {
@@ -80,8 +80,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Jia Hao',
-        short_name: 'Jia Hao',
+        name: 'Jonathan Mares',
+        short_name: 'Jonathan Mares',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#5C6BC0',
