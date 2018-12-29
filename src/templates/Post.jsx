@@ -40,6 +40,7 @@ export default function PostTemplate({
         html={html}
         id={id}
         location={location}
+        site={site}
         title={title}
       />
     </Layout>

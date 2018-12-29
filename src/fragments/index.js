@@ -8,6 +8,7 @@ export const siteFragment = graphql`
         title
         author
         description
+        disqusShortName
         facebookAppId
         twitterUser
         social {

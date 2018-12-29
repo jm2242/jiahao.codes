@@ -6,6 +6,7 @@ module.exports = {
     description: 'Personal website and blog on technology, motorcycles, and more.',
     facebookAppId: '1373234856114390',
     twitterUser: 'jmares93',
+    disqusShortName: "jonathanmares",
     social: {
       githubUrl: 'https://github.com/jm2242',
       keybaseUrl: 'https://keybase.io/jmares',

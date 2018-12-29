@@ -7,7 +7,10 @@ import ReactDisqusComments from "react-disqus-comments"
 import styled from 'styled-components'
 
 import Image from './Image';
-import { image as imagePropType } from '../proptypes';
+import {
+  image as imagePropType,
+  site as sitePropType,
+ } from '../proptypes';
 
 const Title = styled.h1`
   @media only screen and (min-width: 740px) {
@@ -33,6 +36,11 @@ export default function Post({
   html,
   id,
   location: { href },
+  site: {
+    siteMetadata: {
+      disqusShortName
+    }
+  },
   title,
 }) {
   return (
@@ -46,12 +54,13 @@ export default function Post({
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <hr />
       <ReactDisqusComments
-        shortname="jonathanmares"
+        shortname={disqusShortName}
         identifier={id}
         title={title}
         url={href}
         onNewComment={() => {}}
-		  />
+      />
+      <hr />
       <p>
         <Link to="/about">I’m</Link> Jonathan Mares, {"I'm"} a software engineer in Washington, DC. Follow me on{' '}
         <a href="https://twitter.com/jmares93" rel="noopener noreferrer">
@@ -69,6 +78,7 @@ Post.propTypes = {
   html: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   location: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  site: sitePropType.isRequired,
   title: PropTypes.string.isRequired,
 };
 

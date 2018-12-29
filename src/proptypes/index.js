@@ -20,6 +20,7 @@ export const site = ptShape({
     title: ptString.isRequired,
     author: ptString.isRequired,
     description: ptString.isRequired,
+    disqusShortName: ptString.isRequired,
     facebookAppId: ptString.isRequired,
     twitterUser: ptString.isRequired,
     social: siteSocial.isRequired,
