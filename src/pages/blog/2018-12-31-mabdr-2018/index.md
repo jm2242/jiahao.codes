@@ -51,11 +51,24 @@ Skyline Drive leads into the Blue Ridge Parkway, which we took for about half a 
 
 ![Day 2](./mabdr-day-2.png)
 
+Some photos from today:
+
+![Making Coffee](./making-coffee.jpg)
+*Avichai takes a picture of Dad taking a picture of me making coffee*
+
+![Country Store](./country-store.jpg)
+*Stopping at the Country Store to wait out some rain*
+
 After a long day of riding, it was nice to stop a hotel. The Depot Lodge has an interesting configuration - it has a few bedrooms upstairs, with a nicely decorated common area on the ground floor. It looks like it used to be a train station back in the day. The even had a room in a converted train car!
 
 We met a couple on a Ducati Multistrada on a road trip from Canada to Georgia riding two-up and had a nice time chatting with them for a little while.
 
 # Day 3 - Depot Lodge to Brandywine
+
+Lots of nice off road riding today. The going was slower as the riding in the forest did have some technical sections
+
+![Dad Navigates Mud](./dad-mud.jpg)
+*Dad navigates some slippery mud*
 
 ![Day 3](./mabdr-day-3.png)
 
@@ -97,6 +110,12 @@ The route passes through Harper's Ferry, a nice town that is a popular weekend s
 
 Today was commute home. Dad and Avichai packed up and rode back to New York, while I rode in the opposite direction back to Virginia.
 
+# More Photos
+Some more random photos:
+
+![Mosquito Net Hat](./mosquito-hat.jpg)
+
+
 # Final Thoughts
 
 I enjoyed this trip and also learned a few things along the way:
@@ -116,11 +135,5 @@ While the primary purpose of our trip was to ride, there were many things along 
 
 You learn a lot after travelling for a few days on motorcycles. You learn what gear you brought is useful, and what to leave at home (for example, our leaky tent that just did not stand up to the rain). You learn how to manage time. You learn to plan around the weather. You can apply all of this to your longer trip to make it more successful and enjoyable.
 
-
-![Making Coffee](./making-coffee.jpg)
-*Avichai takes a picture of Dad taking a picture of me making coffee*
-
-![Dad Navigates Mud](./dad-mud.jpg)
-*Dad navigates some slippery mud*
 
 Next up will either be the Trans America Trail or the Continental Divide. This has been a great trip on the bigger bikes, in preparation for something longer and more demanding. Let me know what you guys think in the comments below!
