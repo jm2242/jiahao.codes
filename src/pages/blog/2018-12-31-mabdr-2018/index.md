@@ -2,8 +2,8 @@
 title: Riding the Mid Atlantic Backcountry Discovery Route
 date: 2018-12-31
 excerpt: A summer 2018 Motorcycle Adventure
-draft: true
 tags: ["motorcycle"]
+cover: ./cover.jpg
 ---
 
 This summer, my Dad and his friend Avichai decided to ride the Mid Atlantic Backcountry Discovery Route, shortened to MABDR, a [route](https://ridebdr.com/MABDR) developed by the BDR group, a nonprofit. We were excited to try out this route, as it is one of the few extended trails in the northeast that caters to adventure motorcyclists.
