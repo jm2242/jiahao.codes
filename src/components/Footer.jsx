@@ -34,7 +34,7 @@ export default function Footer() {
         2018 Jia Hao Goh. Modified by Jonathan Mares.
       </Copyright>
       <StyledLink
-        href="https://github.com/jm2242/jiahao.codes"
+        href="https://github.com/jm2242/personalWebsite"
         target="_blank"
         rel="noopener"
         title="Source code for this website"

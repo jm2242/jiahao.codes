@@ -1,11 +1,11 @@
 {
-  "name": "jiahao.codes",
+  "name": "personalWebsite",
   "description": "Personal Website and Blog",
   "version": "1.1.0",
   "author": "Jonathan Mares",
   "private": true,
   "bugs": {
-    "url": "https://github.com/jm2242/jiahao.codes/issues"
+    "url": "https://github.com/jm2242/personalWebsite/issues"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
@@ -84,7 +84,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jm2242/jiahao.codes.git"
+    "url": "git+https://github.com/jm2242/personalWebsite.git"
   },
   "scripts": {
     "start": "gatsby develop",
