@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-danger */
 
 import React from 'react';
@@ -62,7 +63,7 @@ export default function Post({
       />
       <hr />
       <p>
-        <Link to="/about">I’m</Link> Jonathan Mares, {"I'm"} a software engineer in Washington, DC. Follow me on{' '}
+        <Link to="/about">I’m</Link> Jonathan Mares, I'm a software engineer in Washington, DC. Follow me on{' '}
         <a href="https://twitter.com/jmares93" rel="noopener noreferrer">
           Twitter
         </a>!

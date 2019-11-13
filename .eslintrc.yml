@@ -15,5 +15,6 @@ rules:
     - components: []
   react/no-unused-prop-types: off
   no-unused-vars: off
+  react/prop-types: warn
 settings:
   import/core-modules: ['react', 'react-helmet']
