@@ -124,6 +124,13 @@ Dad complaining that I wake up too late and that we can't be leaving at 11
 
 # Day 18 -
 
+Today we left Del Norte, Colorado and continued south for some more off road riding. The riding was pretty tame - a little bit of gravel here and there. We did a few more passes. The views were a nice combination of both mountain and desert climate.
+
+
+
+We are camping tonight and got some food and cooked. That was nice. We tried to light a fire, but failed miserably.
+I also had a bit of a mishap on my motorcycle. I tried to lean it hard back to level on a fairly angled slope, and lossed my balance had the bike topple kind of on me. That wouldn't be that big of a deal but my Helite vest airbag was attached, which was unfortunate because it was just enough to get it to explode.
+
 ![Day 15](./day_18.png)
 
 # Day 19 -
