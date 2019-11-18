@@ -52,6 +52,7 @@ export default function Post({
         <small>{date}</small>
       </Date>
       {coverImageSizes && <Image alt={title} sizes={coverImageSizes} />}
+      <br/>
       <div dangerouslySetInnerHTML={{ __html: html }} />
       <hr />
       <ReactDisqusComments

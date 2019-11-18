@@ -4,7 +4,6 @@ date: 2019-11-17
 excerpt: Solving the Max Frequency Stack problem
 tags: ["tech"]
 ---
-<br/>
 
 Today's random algorithms problem was the Maximum Frequency Stack question. You can find this problem on Leetcode [here](https://leetcode.com/problems/maximum-frequency-stack/submissions/). The goal of this problem is to implement `FreqStack` that has the following spec:
 
