@@ -18,7 +18,10 @@ export default function SiteIndex({
       <Head site={site} />
       <IndexPage
         title="Latest Posts"
-        text={`Welcome to my Blog and Personal Website!`}
+        text={
+          `Welcome to my Blog and Personal Website! Here I write about computer science, software engineering,
+          and motorcycles.`
+        }
         posts={posts.map(
           ({
             node: {
